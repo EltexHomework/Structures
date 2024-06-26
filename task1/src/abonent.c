@@ -4,15 +4,17 @@
 
 int find_free_abonent(struct abonent abonents[SIZE]) {
   for (int i = 0; i < SIZE; i++) {
-    struct abonent abonent = abonents[i];
-    if (strcmp(abonent.name, "") == 0 && strcmp(abonent.second_name, "") == 0 && strcmp(abonent.second_name, "") == 0) {
+    struct abonent* abonent = &abonents[i];
+    if (strcmp(abonent->name, "") == 0 && strcmp(abonent->second_name, "") == 0 
+      && strcmp(abonent->second_name, "") == 0) {
       return i; 
     }
   }
   return -1;
 }
 
-int add_abonent(struct abonent abonents[SIZE], char name[STR_SIZE], char second_name[STR_SIZE], char tel[STR_SIZE]) {
+int add_abonent(struct abonent abonents[SIZE], char name[STR_SIZE], 
+                char second_name[STR_SIZE], char tel[STR_SIZE]) {
   int index = find_free_abonent(abonents);
 
   if (index == -1)
@@ -32,9 +34,11 @@ void delete_abonent(struct abonent* abonent) {
   strcpy(abonent->tel, "");
 }
 
-void delete_abonents_by_name(struct abonent abonents[SIZE], char name[STR_SIZE]) {
+void delete_abonent_by_params(struct abonent abonents[SIZE], char name[STR_SIZE], 
+                              char second_name[STR_SIZE], char tel[STR_SIZE]) {
   for (int i = 0; i < SIZE; i++) {
-    if (strcmp(abonents[i].name, name) == 0) {
+    if (strcmp(abonents[i].name, name) == 0 && strcmp(abonents[i].second_name, second_name) == 0 
+      && strcmp(abonents[i].tel, tel) == 0) {
       delete_abonent(&abonents[i]);
     }  
   } 
@@ -44,7 +48,7 @@ void find_abonents_by_name(struct abonent abonents[SIZE], char name[STR_SIZE]) {
   for (int i = 0; i < SIZE; i++) {
     if (strcmp(abonents[i].name, name) == 0) {
       print_abonent(&abonents[i]);
-    } 
+    }
   }
 }
 
@@ -59,9 +63,9 @@ void print_abonent(struct abonent *abonent) {
 void print_all_abonents(struct abonent abonents[SIZE]) {
   for (int i = 0; i < SIZE; i++) {
     struct abonent abonent = abonents[i];
-    if (strcmp(abonent.name, "") == 0 && strcmp(abonent.second_name, "") == 0 && strcmp(abonent.second_name, "") == 0) {
-      return; 
+    if (strcmp(abonent.name, "") != 0 && strcmp(abonent.second_name, "") != 0 
+      && strcmp(abonent.second_name, "") != 0) {
+      print_abonent(&abonent);
     }
-    print_abonent(&abonent);
   }
 }

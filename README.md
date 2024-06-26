@@ -27,7 +27,91 @@ struct abonent {
 5) Выход
 и пользователю предлагается ввести пункт меня с клавиатуры. Добавление абонента в массив реализуется простым заполнением свободной структуры, при выходе за 100 абонентов уведомить пользователя о переполнении справочника и не позволять больше добавлять абонентов. При удалении структура заполняется нулями. При поиске пользователь вводит с клавиатуры имя абонентов и на экран выводится список всех абонентов с таким же именем. Программа продолжает выполняться пока пользователь не введет пункт 5.
 ## Результаты тестирования программы
+- Создание абонента
+```
+___MENU___
+1) Add abonent
+2) Delete abonent
+3) Find abonent by name
+4) Print all abonents
+5) Exit
+Enter option: 1
+Enter name: danil
+Enter second name: gorshkov
+Enter tel: 222
+```
+- Удаление абонента
+```
+___MENU___
+1) Add abonent
+2) Delete abonent
+3) Find abonent by name
+4) Print all abonents
+5) Exit
+Enter option: 2
+Enter name: danil
+Enter second name: gorshkov
+Enter tel: 222
 
 
+___MENU___
+1) Add abonent
+2) Delete abonent
+3) Find abonent by name
+4) Print all abonents
+5) Exit
+Enter option: 4
+
+___Abonent___
+Abonent name: danil
+Abonent second_name: petrow
+Abonent tel: 333
+```
+- Поиск абонента
+```
+___MENU___
+1) Add abonent
+2) Delete abonent
+3) Find abonent by name
+4) Print all abonents
+5) Exit
+Enter option: 3
+Enter name: danil
+
+___Abonent___
+Abonent name: danil
+Abonent second_name: gorshkov
+Abonent tel: 222
+```
+- Вывод всех записей
+```
+___MENU___
+1) Add abonent
+2) Delete abonent
+3) Find abonent by name
+4) Print all abonents
+5) Exit
+Enter option: 4
+
+___Abonent___
+Abonent name: danil
+Abonent second_name: gorshkov
+Abonent tel: 222
+
+___Abonent___
+Abonent name: danil
+Abonent second_name: petrow
+Abonent tel: 333
+```
+- Выход
+```
+___MENU___
+1) Add abonent
+2) Delete abonent
+3) Find abonent by name
+4) Print all abonents
+5) Exit
+Enter option: 5 
+```
 ## Демонстрация работы программ
 

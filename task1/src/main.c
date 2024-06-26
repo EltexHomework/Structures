@@ -67,7 +67,7 @@ int read_option() {
   int option;
   
   printf("Enter option: ");
-  if (scanf("%d", &option) == 0) {
+  if (scanf("%d", &option) == 0 || option < 1 || option > 5) {
     return -1;
   } 
   flush_stdin();  
@@ -110,10 +110,15 @@ int read_values_and_add_abonent(struct abonent abonents[SIZE]) {
 
 int delete_abonents(struct abonent abonents[SIZE]) {
   char name[STR_SIZE];
+  char second_name[STR_SIZE];
+  char tel[STR_SIZE];
 
   read_string(name, "Enter name: "); 
+  read_string(second_name, "Enter second name: ");
+  read_string(tel, "Enter tel: ");
   
-  delete_abonents_by_name(abonents, name);
+  printf("\n");
+  delete_abonent_by_params(abonents, name, second_name, tel);
   printf("\n");
 
   return 1;
@@ -121,15 +126,20 @@ int delete_abonents(struct abonent abonents[SIZE]) {
 
 int find_abonents(struct abonent abonents[SIZE]) {
   char name[STR_SIZE];
-
+  
   read_string(name, "Enter name: "); 
   
+  printf("\n");
   find_abonents_by_name(abonents, name);
+  printf("\n");
+
   return 1;
 }
 
 void print_abonents(struct abonent abonents[SIZE]) {
+  printf("\n");
   print_all_abonents(abonents); 
+  printf("\n");
 }
 
 void flush_stdin() {
