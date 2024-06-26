@@ -114,4 +114,5 @@ ___MENU___
 Enter option: 5 
 ```
 ## Демонстрация работы программ
+![image](https://github.com/EltexHomework/Structures/assets/70006380/70098cbf-cf27-41bd-8237-f56420742e72)
 
