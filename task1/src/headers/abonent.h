@@ -1,7 +1,7 @@
 #ifndef ABONENT_H
 #define ABONENT_H
 
-#define SIZE 100
+#define SIZE 1
 #define STR_SIZE 10
 
 struct abonent {
@@ -10,7 +10,7 @@ struct abonent {
   char tel[STR_SIZE];
 };
 
-void add_abonent(struct abonent abonents[SIZE], char name[STR_SIZE], char second_name[STR_SIZE], char tel[STR_SIZE]);
+int add_abonent(struct abonent abonents[SIZE], char name[STR_SIZE], char second_name[STR_SIZE], char tel[STR_SIZE]);
 void delete_abonents_by_name(struct abonent abonents[SIZE], char name[STR_SIZE]); 
 void find_abonents_by_name(struct abonent abonents[SIZE], char name[STR_SIZE]);
 void print_abonent(struct abonent *abonent);

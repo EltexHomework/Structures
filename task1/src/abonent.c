@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-
 #include "headers/abonent.h"
 
 int find_free_abonent(struct abonent abonents[SIZE]) {
@@ -13,13 +12,18 @@ int find_free_abonent(struct abonent abonents[SIZE]) {
   return -1;
 }
 
-void add_abonent(struct abonent abonents[SIZE], char name[STR_SIZE], char second_name[STR_SIZE], char tel[STR_SIZE]) {
+int add_abonent(struct abonent abonents[SIZE], char name[STR_SIZE], char second_name[STR_SIZE], char tel[STR_SIZE]) {
   int index = find_free_abonent(abonents);
+
+  if (index == -1)
+    return index;
+  
   struct abonent* abonent = &abonents[index];
 
   strcpy(abonent->name, name);
   strcpy(abonent->second_name, second_name);
   strcpy(abonent->tel, tel);
+  return 0;
 }
 
 void delete_abonent(struct abonent* abonent) {
@@ -49,6 +53,7 @@ void print_abonent(struct abonent *abonent) {
   printf("Abonent name: %s\n", abonent->name);
   printf("Abonent second_name: %s\n", abonent->second_name);
   printf("Abonent tel: %s\n", abonent->tel);
+  printf("\n");
 }
 
 void print_all_abonents(struct abonent abonents[SIZE]) {
