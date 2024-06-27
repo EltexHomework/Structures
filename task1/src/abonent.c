@@ -34,11 +34,9 @@ void delete_abonent(struct abonent* abonent) {
   strcpy(abonent->tel, "");
 }
 
-void delete_abonent_by_params(struct abonent abonents[SIZE], char name[STR_SIZE], 
-                              char second_name[STR_SIZE], char tel[STR_SIZE]) {
+void delete_abonents_by_name(struct abonent abonents[SIZE], char name[STR_SIZE]) {
   for (int i = 0; i < SIZE; i++) {
-    if (strcmp(abonents[i].name, name) == 0 && strcmp(abonents[i].second_name, second_name) == 0 
-      && strcmp(abonents[i].tel, tel) == 0) {
+    if (strcmp(abonents[i].name, name) == 0) {
       delete_abonent(&abonents[i]);
     }  
   } 

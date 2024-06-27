@@ -110,15 +110,11 @@ int read_values_and_add_abonent(struct abonent abonents[SIZE]) {
 
 int delete_abonents(struct abonent abonents[SIZE]) {
   char name[STR_SIZE];
-  char second_name[STR_SIZE];
-  char tel[STR_SIZE];
 
   read_string(name, "Enter name: "); 
-  read_string(second_name, "Enter second name: ");
-  read_string(tel, "Enter tel: ");
   
   printf("\n");
-  delete_abonent_by_params(abonents, name, second_name, tel);
+  delete_abonents_by_name(abonents, name);
   printf("\n");
 
   return 1;

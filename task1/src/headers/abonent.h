@@ -11,7 +11,7 @@ struct abonent {
 };
 
 int add_abonent(struct abonent abonents[SIZE], char name[STR_SIZE], char second_name[STR_SIZE], char tel[STR_SIZE]);
-void delete_abonent_by_params(struct abonent abonents[SIZE], char name[STR_SIZE], char second_name[STR_SIZE], char tel[STR_SIZE]); 
+void delete_abonents_by_name(struct abonent abonents[SIZE], char name[STR_SIZE]); 
 void find_abonents_by_name(struct abonent abonents[SIZE], char name[STR_SIZE]);
 void print_abonent(struct abonent *abonent);
 int find_free_abonent(struct abonent abonents[SIZE]);

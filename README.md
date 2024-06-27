@@ -50,8 +50,6 @@ ___MENU___
 5) Exit
 Enter option: 2
 Enter name: danil
-Enter second name: gorshkov
-Enter tel: 222
 
 
 ___MENU___
@@ -61,11 +59,6 @@ ___MENU___
 4) Print all abonents
 5) Exit
 Enter option: 4
-
-___Abonent___
-Abonent name: danil
-Abonent second_name: petrow
-Abonent tel: 333
 ```
 - Поиск абонента
 ```
